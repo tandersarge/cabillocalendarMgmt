@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cabillocalendarMgmt", "cabillocalendarMgmt.csproj", "{483CD5CC-1B10-4553-84B2-A6A59D765BFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountMgmtAppService", "..\AccountMgmtAppService\AccountMgmtAppService.csproj", "{14841108-8F02-438D-86F6-62E7279D1807}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountMgmtDataService", "..\AccountMgmtDataService\AccountMgmtDataService.csproj", "{AC89922F-2D7E-4FA6-AEF1-13793B38A4F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountMgmtDataModel", "..\AccountMgmtDataModel\AccountMgmtDataModel.csproj", "{215D9BE4-9144-429E-8DA5-E8C856AEC476}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{483CD5CC-1B10-4553-84B2-A6A59D765BFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{483CD5CC-1B10-4553-84B2-A6A59D765BFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{483CD5CC-1B10-4553-84B2-A6A59D765BFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{483CD5CC-1B10-4553-84B2-A6A59D765BFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14841108-8F02-438D-86F6-62E7279D1807}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14841108-8F02-438D-86F6-62E7279D1807}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14841108-8F02-438D-86F6-62E7279D1807}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14841108-8F02-438D-86F6-62E7279D1807}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC89922F-2D7E-4FA6-AEF1-13793B38A4F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC89922F-2D7E-4FA6-AEF1-13793B38A4F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC89922F-2D7E-4FA6-AEF1-13793B38A4F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC89922F-2D7E-4FA6-AEF1-13793B38A4F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{215D9BE4-9144-429E-8DA5-E8C856AEC476}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{215D9BE4-9144-429E-8DA5-E8C856AEC476}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{215D9BE4-9144-429E-8DA5-E8C856AEC476}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{215D9BE4-9144-429E-8DA5-E8C856AEC476}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
