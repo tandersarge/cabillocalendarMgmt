@@ -1,4 +1,6 @@
-﻿namespace CabilloCalendar
+﻿using AccountDataService;
+
+namespace CabilloCalendar
 {
     internal class Program
     {

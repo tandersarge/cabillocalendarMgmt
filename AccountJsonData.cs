@@ -1,20 +1,18 @@
-﻿using System.Globalization;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
 using System.Text.Json;
-using static AccountMgmtDataService.AccountDataService;
+using AccountDataService;
 
 namespace AccountManagementDataService
 {
     public class AccountJsonData
     {
         private readonly string _jsonFileName;
-        private List<CalendarBL> _calendars = new List<CalendarBL>();
         private readonly object _lockObject = new object();
 
-        public List<CalendarBL> Calendars
-        {
-            get { return _calendars; }
-            private set { _calendars = value; }
-        }
+        // Must be PUBLIC to fix CS1061
+        public List<CalendarEvent> Events { get; private set; } = new List<CalendarEvent>();
 
         public AccountJsonData()
         {
@@ -30,29 +28,27 @@ namespace AccountManagementDataService
                 {
                     RetrieveDataFromJsonFile();
                 }
-
-                if (Calendars.Count <= 0)
+                else
                 {
-                    Calendars.Add(new CalendarBL());
+                    Events = new List<CalendarEvent>();
                     SaveDataToJsonFile();
                 }
             }
         }
 
-        private void SaveDataToJsonFile()
+        public void SaveDataToJsonFile()
         {
             lock (_lockObject)
             {
                 try
                 {
                     var options = new JsonSerializerOptions { WriteIndented = true };
-                    string jsonString = JsonSerializer.Serialize(Calendars, options);
+                    string jsonString = JsonSerializer.Serialize(Events, options);
                     File.WriteAllText(_jsonFileName, jsonString);
                 }
                 catch (IOException ex)
                 {
-                    Console.WriteLine($"Error saving calendars to JSON file: {ex.Message}");
-                    throw;
+                    Console.WriteLine($"Error saving to JSON: {ex.Message}");
                 }
             }
         }
@@ -63,76 +59,25 @@ namespace AccountManagementDataService
             {
                 try
                 {
-                    if (!File.Exists(_jsonFileName))
-                    {
-                        Calendars = new List<CalendarBL>();
-                        return;
-                    }
-
                     string jsonString = File.ReadAllText(_jsonFileName);
-                    var deserializedCalendars = JsonSerializer.Deserialize<List<CalendarBL>>(jsonString);
-                    Calendars = deserializedCalendars ?? new List<CalendarBL>();
+                    Events = JsonSerializer.Deserialize<List<CalendarEvent>>(jsonString) ?? new List<CalendarEvent>();
                 }
-                catch (JsonException ex)
+                catch (Exception ex)
                 {
-                    Console.WriteLine($"Error deserializing JSON: {ex.Message}");
-                    Calendars = new List<CalendarBL>();
-                }
-                catch (IOException ex)
-                {
-                    Console.WriteLine($"Error reading calendars file: {ex.Message}");
-                    Calendars = new List<CalendarBL>();
+                    Console.WriteLine($"Error reading JSON: {ex.Message}");
+                    Events = new List<CalendarEvent>();
                 }
             }
         }
 
-        public void Add(CalendarBL calendar)
+        // Must be PUBLIC to fix CS1061
+        public void Add(CalendarEvent newEvent)
         {
-            if (calendar == null)
-                throw new ArgumentNullException(nameof(calendar), "Calendar object cannot be null.");
-
             lock (_lockObject)
             {
-                Calendars.Add(calendar);
+                Events.Add(newEvent);
                 SaveDataToJsonFile();
             }
         }
-
-        public List<CalendarBL> GetCalendars()
-        {
-            lock (_lockObject)
-            {
-                RetrieveDataFromJsonFile();
-                return new List<CalendarBL>(Calendars);
-            }
-        }
-
-        public void DeleteCalendar(int index)
-        {
-            if (index < 0 || index >= Calendars.Count)
-                throw new ArgumentOutOfRangeException(nameof(index), "Calendar index is out of range.");
-
-            lock (_lockObject)
-            {
-                Calendars.RemoveAt(index);
-                SaveDataToJsonFile();
-            }
-        }
-
-        public CalendarBL GetCalendarAt(int index)
-        {
-            if (index < 0 || index >= Calendars.Count)
-                throw new ArgumentOutOfRangeException(nameof(index), "Calendar index is out of range.");
-
-            lock (_lockObject)
-            {
-                RetrieveDataFromJsonFile();
-                return Calendars[index];
-            }
-        }
-    }
-
-    internal class CalendarBL
-    {
     }
 }

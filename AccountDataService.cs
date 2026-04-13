@@ -60,24 +60,36 @@ namespace AccountDataService
     }
     internal class CalendarDBData
     {
+        private List<CalendarEvent> _events = new List<CalendarEvent>();
+
         internal void Add(CalendarEvent newEvent)
         {
-            throw new NotImplementedException();
+            _events.Add(newEvent);
         }
 
         internal void Delete(int id)
         {
-            throw new NotImplementedException();
+            var eventToDelete = _events.FirstOrDefault(e => e.EventId == id);
+            if (eventToDelete != null)
+            {
+                _events.Remove(eventToDelete);
+            }
         }
 
         internal List<CalendarEvent> GetEvents()
         {
-            throw new NotImplementedException();
+            return _events;
         }
 
         internal void Update(CalendarEvent updatedEvent)
         {
-            throw new NotImplementedException();
+            var existingEvent = _events.FirstOrDefault(e => e.EventId == updatedEvent.EventId);
+
+            if (existingEvent != null)
+            {
+                existingEvent.EventDate = updatedEvent.EventDate;
+                existingEvent.EventDescription = updatedEvent.EventDescription;
+            }
         }
     }
 }
