@@ -11,8 +11,8 @@
     <PackageReference Include="Microsoft.Data.SqlClient" Version="7.0.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\AccountMgmtDataService\AccountMgmtDataService.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\AccountMgmtAppService\AccountMgmtAppService.csproj" />
+	</ItemGroup>
 
 </Project>
