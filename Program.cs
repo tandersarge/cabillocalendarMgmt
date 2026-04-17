@@ -38,7 +38,7 @@ namespace CabilloCalendar
                         Console.WriteLine("Goodbye!");
                         break;
                     default:
-                        Console.WriteLine("Invalid option. Please try again.");
+                        Console.WriteLine("Invalid option. Please try again and make sure your input matches the format shown in the example.");
                         break;
                 }
             }
@@ -98,7 +98,7 @@ namespace CabilloCalendar
 
         static void DeleteEvent()
         {
-            Console.Write("Enter the number of the event to delete: ");
+            Console.Write("Enter the number of the event you want to delete: ");
             if (int.TryParse(Console.ReadLine(), out int index) && index > 0)
             {
                 if (calendarBL.DeleteEvent(index))
