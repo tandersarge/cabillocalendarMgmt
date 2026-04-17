@@ -1,0 +1,15 @@
+C:\Users\M720Q\Documents\calendarMgmt\AccountMgmtDataService\bin\Debug\net8.0\AccountMgmtDataService.deps.json
+C:\Users\M720Q\Documents\calendarMgmt\AccountMgmtDataService\bin\Debug\net8.0\AccountMgmtDataService.dll
+C:\Users\M720Q\Documents\calendarMgmt\AccountMgmtDataService\bin\Debug\net8.0\AccountMgmtDataService.pdb
+C:\Users\M720Q\Documents\calendarMgmt\AccountMgmtDataService\bin\Debug\net8.0\AccountMgmtDataModel.dll
+C:\Users\M720Q\Documents\calendarMgmt\AccountMgmtDataService\bin\Debug\net8.0\AccountMgmtDataModel.pdb
+C:\Users\M720Q\Documents\calendarMgmt\AccountMgmtDataService\obj\Debug\net8.0\AccountMgmtDataService.csproj.AssemblyReference.cache
+C:\Users\M720Q\Documents\calendarMgmt\AccountMgmtDataService\obj\Debug\net8.0\AccountMgmtDataService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\M720Q\Documents\calendarMgmt\AccountMgmtDataService\obj\Debug\net8.0\AccountMgmtDataService.AssemblyInfoInputs.cache
+C:\Users\M720Q\Documents\calendarMgmt\AccountMgmtDataService\obj\Debug\net8.0\AccountMgmtDataService.AssemblyInfo.cs
+C:\Users\M720Q\Documents\calendarMgmt\AccountMgmtDataService\obj\Debug\net8.0\AccountMgmtDataService.csproj.CoreCompileInputs.cache
+C:\Users\M720Q\Documents\calendarMgmt\AccountMgmtDataService\obj\Debug\net8.0\AccountM.1196C279.Up2Date
+C:\Users\M720Q\Documents\calendarMgmt\AccountMgmtDataService\obj\Debug\net8.0\AccountMgmtDataService.dll
+C:\Users\M720Q\Documents\calendarMgmt\AccountMgmtDataService\obj\Debug\net8.0\refint\AccountMgmtDataService.dll
+C:\Users\M720Q\Documents\calendarMgmt\AccountMgmtDataService\obj\Debug\net8.0\AccountMgmtDataService.pdb
+C:\Users\M720Q\Documents\calendarMgmt\AccountMgmtDataService\obj\Debug\net8.0\ref\AccountMgmtDataService.dll
