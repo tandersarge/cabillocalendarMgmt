@@ -10,6 +10,7 @@ C:\Users\M720Q\Documents\calendarMgmt\AccountMgmtAppService\obj\Debug\net8.0\Acc
 C:\Users\M720Q\Documents\calendarMgmt\AccountMgmtAppService\obj\Debug\net8.0\AccountMgmtAppService.AssemblyInfoInputs.cache
 C:\Users\M720Q\Documents\calendarMgmt\AccountMgmtAppService\obj\Debug\net8.0\AccountMgmtAppService.AssemblyInfo.cs
 C:\Users\M720Q\Documents\calendarMgmt\AccountMgmtAppService\obj\Debug\net8.0\AccountMgmtAppService.csproj.CoreCompileInputs.cache
+C:\Users\M720Q\Documents\calendarMgmt\AccountMgmtAppService\obj\Debug\net8.0\AccountMgmtAppService.sourcelink.json
 C:\Users\M720Q\Documents\calendarMgmt\AccountMgmtAppService\obj\Debug\net8.0\AccountM.D84BA40B.Up2Date
 C:\Users\M720Q\Documents\calendarMgmt\AccountMgmtAppService\obj\Debug\net8.0\AccountMgmtAppService.dll
 C:\Users\M720Q\Documents\calendarMgmt\AccountMgmtAppService\obj\Debug\net8.0\refint\AccountMgmtAppService.dll
