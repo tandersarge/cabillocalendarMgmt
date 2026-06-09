@@ -88,6 +88,7 @@ namespace CabilloCalendar
             }
         }
 
+
         internal void Update(AppModel updatedEvent)
         {
             var existingEvent = _jsonData.Events.FirstOrDefault(e => e.EventId == updatedEvent.EventId);

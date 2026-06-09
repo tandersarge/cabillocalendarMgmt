@@ -1,5 +1,6 @@
 ﻿namespace AccountMgmtDataModel.Models
 {
+
     public class CalendarEvent
     {
         public int EventId { get; set; }
