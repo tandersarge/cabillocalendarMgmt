@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Linq;
 using AppModel = AccountMgmtDataModel.Models.CalendarEvent;
-using DataEntity = AccountMgmtDataModel.Models.CalendarEvent;
 using MyDataService = AccountManagementDataService;
-
 
 namespace CabilloCalendar
 {
@@ -20,7 +18,6 @@ namespace CabilloCalendar
                 EventDate = date,
                 EventDescription = description
             };
-
             _dbData.Add(newEvent);
             return true;
         }
@@ -29,7 +26,6 @@ namespace CabilloCalendar
         {
             List<AppModel> events = _dbData.GetEvents();
             if (events == null || events.Count == 0) return "No events found. Please add an event first...";
-
             StringBuilder sb = new StringBuilder();
             foreach (var ev in events)
             {
@@ -63,14 +59,7 @@ namespace CabilloCalendar
 
         internal void Add(AppModel newEvent)
         {
-            int nextId = (_jsonData.Events != null && _jsonData.Events.Count > 0)
-                         ? _jsonData.Events.Max(e => e.EventId) + 1
-                         : 1;
-
-            newEvent.EventId = nextId;
-
-            _jsonData.Add(newEvent);
-            _jsonData.Save(); 
+            _jsonData.Add(newEvent); 
         }
 
         internal List<AppModel> GetEvents()
@@ -80,24 +69,12 @@ namespace CabilloCalendar
 
         internal void Delete(int id)
         {
-            var eventToRemove = _jsonData.Events.FirstOrDefault(e => e.EventId == id);
-            if (eventToRemove != null)
-            {
-                _jsonData.Events.Remove(eventToRemove);
-                _jsonData.Save();
-            }
+            _jsonData.Delete(id); 
         }
-
 
         internal void Update(AppModel updatedEvent)
         {
-            var existingEvent = _jsonData.Events.FirstOrDefault(e => e.EventId == updatedEvent.EventId);
-            if (existingEvent != null)
-            {
-                existingEvent.EventDate = updatedEvent.EventDate;
-                existingEvent.EventDescription = updatedEvent.EventDescription;
-                _jsonData.Save();
-            }
+            _jsonData.Update(updatedEvent); 
         }
     }
 }

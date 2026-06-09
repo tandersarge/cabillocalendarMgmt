@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "ebx7vCaf2Vc=",
+  "dgSpecHash": "uX2ubL6ZL9g=",
   "success": true,
   "projectFilePath": "C:\\Users\\M720Q\\Documents\\calendarMgmt\\AccountMgmtDataService\\AccountMgmtDataService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\M720Q\\.nuget\\packages\\microsoft.bcl.cryptography\\8.0.0\\microsoft.bcl.cryptography.8.0.0.nupkg.sha512",
-    "C:\\Users\\M720Q\\.nuget\\packages\\microsoft.data.sqlclient\\7.0.0\\microsoft.data.sqlclient.7.0.0.nupkg.sha512",
+    "C:\\Users\\M720Q\\.nuget\\packages\\microsoft.data.sqlclient\\7.0.1\\microsoft.data.sqlclient.7.0.1.nupkg.sha512",
     "C:\\Users\\M720Q\\.nuget\\packages\\microsoft.data.sqlclient.extensions.abstractions\\1.0.0\\microsoft.data.sqlclient.extensions.abstractions.1.0.0.nupkg.sha512",
     "C:\\Users\\M720Q\\.nuget\\packages\\microsoft.data.sqlclient.internal.logging\\1.0.0\\microsoft.data.sqlclient.internal.logging.1.0.0.nupkg.sha512",
     "C:\\Users\\M720Q\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\6.0.2\\microsoft.data.sqlclient.sni.runtime.6.0.2.nupkg.sha512",
